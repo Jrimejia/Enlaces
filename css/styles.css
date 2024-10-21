@@ -7,7 +7,7 @@
 }
 
 .showcase-area {
-    height: 30vh;
+    height: 38vh;
     background: linear-gradient(
         #f0f0f025,
         rgba(255, 255, 255, 0.336)
@@ -20,12 +20,12 @@
   
   .btn-primary {
     color: #fff;
-    background-color: #17556b;
+    background-color: #17556b;  /* ESTE CAMPO ES PARA RELLENAR EL COLOR DEL VER MÁS */ 
 }
 
 .btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
     color: #ffffffb9;
-    background-color: #ffffffb9;
+    background-color: #ffffffb9; /* ESTE CAMPO ES PARA RELLENAR EL COLOR DEL VER MÁS PERO EL INTERNO CUANDO PASA EL CURSOR  */  
 }
 
 .logo {
