@@ -10,165 +10,102 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+  <!-- Anime.js for animations -->
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
   <!-- STYLES CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    *, *::after, *::before {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-    }
-
-    h2 {
-      text-align: center;
-      margin: 40px 0;
-      font-weight: bold;
-    }
-
-    .btn-primary {
-      color: #fff;
-      background-color: #22718d;
-      transition: all 0.3s ease;
-      transform: scale(1);
-    }
-
-    .btn-primary:focus,
-    .btn-primary:hover {
-      color: #fff;
-      background-color: #6c757d;
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .showcase-area {
-      height: 350px;
-      background: linear-gradient(#f0f0f025, rgba(255, 255, 255, 0.336)), url("https://i.postimg.cc/tJKKqC7V/imgcarval.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .card {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border-radius: 1rem;
-      background-color: #ffffff;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
+    *, *::after, *::before { box-sizing: border-box; padding: 0; margin: 0; }
+    body { font-family: 'Roboto', sans-serif; background-color: #eef2f7; margin: 0; }
+    .showcase-area { height: 38vh; background: linear-gradient(#f0f0f025, rgba(255,255,255,0.336)), url("https://i.postimg.cc/tJKKqC7V/imgcarval.jpg"); background-size: cover; background-position: center; }
+    h2 { text-align: center; margin: 3rem 0 2rem; font-weight: 700; color: #1f2937; }
+    .section-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 1200px; margin: 0 auto 4rem; padding: 0 1rem; }
+    .block { flex: 0 0 calc(20% - 1rem); background-color: #ffffff; border-radius: 1rem; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: box-shadow 0.3s ease; }
+    .block:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .block i { font-size: 1.5rem; margin-bottom: 0.5rem; color: #3b82f6; }
+    .block h6 { font-size: 0.9rem; margin-bottom: 0.5rem; color: #111827; font-weight: 600; }
+    .block a { display: inline-block; font-size: 0.75rem; background-color: #3b82f6; color: white; padding: 0.4rem 1rem; border-radius: 999px; text-decoration: none; transition: background-color 0.3s ease; }
+    .block a:hover { background-color: #2563eb; }
   </style>
 </head>
 <body>
   <header class="showcase-area"></header>
 
-  <main class="container py-5">
-    <h2 class="text-center mb-5">Enlaces Corporativos</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-
-      <div class="col text-center">
-  <div class="card h-100 py-4">
-    <i class="fas fa-file-excel fa-2x text-success mb-2"></i>
-    <h6>Despachos</h6>
-    <a href="https://carval464-my.sharepoint.com/:x:/r/personal/luis_rodriguez_carval_com_co/_layouts/15/Doc.aspx?sourcedoc=%7BB5F7A87D-A097-42AF-A4D6-D62516B46D62%7D&file=DESPACHOS%20SEDE%20MEDELLIN%202025.xlsx&fromShare=true&action=default&mobileredirect=true" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-  </div>
-</div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-map-marked-alt fa-2x text-primary mb-2"></i>
-          <h6>Tracking</h6>
-          <a href="https://apps.carval.com.co/trackingweb/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+  <main>
+    <h2>Enlaces Corporativos</h2>
+    <div class="section-grid">
+      <div class="block">
+        <i class="fas fa-file-excel text-success"></i>
+        <h6>Despachos</h6>
+        <a href="https://carval464-my.sharepoint.com/:x:/r/personal/luis_rodriguez_carval_com_co/_layouts/15/Doc.aspx?sourcedoc=%7BB5F7A87D-A097-42AF-A4D6-D62516B46D62%7D&file=DESPACHOS%20SEDE%20MEDELLIN%202025.xlsx&fromShare=true&action=default&mobileredirect=true" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-vials fa-2x text-warning mb-2"></i>
-          <h6>Fichas técnicas y de seguridad</h6>
-          <a href="https://carval464.sharepoint.com/sites/fichastecnicasydeseguridad/SitePages/Inicio.aspx" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+      <div class="block">
+        <i class="fas fa-map-marked-alt text-primary"></i>
+        <h6>Tracking</h6>
+        <a href="https://apps.carval.com.co/trackingweb/" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-award fa-2x text-info mb-2"></i>
-          <h6>Certificados Carval</h6>
-          <a href="https://carval464.sharepoint.com/sites/certificadoscarval/Certificados%20de%20Anlisis/Forms/AllItems.aspx" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+      <div class="block">
+        <i class="fas fa-vials text-warning"></i>
+        <h6>Fichas técnicas y de seguridad</h6>
+        <a href="https://carval464.sharepoint.com/sites/fichastecnicasydeseguridad/SitePages/Inicio.aspx" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-file-import fa-2x text-secondary mb-2"></i>
-          <h6>Importaciones Carval</h6>
-          <a href="https://carval464.sharepoint.com/sites/importaciones/default.aspx" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+      <div class="block">
+        <i class="fas fa-award text-info"></i>
+        <h6>Certificados Carval</h6>
+        <a href="https://carval464.sharepoint.com/sites/certificadoscarval/Certificados%20de%20Anlisis/Forms/AllItems.aspx" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-bolt fa-2x text-warning mb-2"></i>
-          <h6>Energy</h6>
-          <a href="http://servicioserp.com/login/18" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+      <div class="block">
+        <i class="fas fa-file-import text-secondary"></i>
+        <h6>Importaciones Carval</h6>
+        <a href="https://carval464.sharepoint.com/sites/importaciones/default.aspx" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-paw fa-2x text-pink mb-2"></i>
-          <h6>O.C StarPets</h6>
-          <a href="https://reporting.carval.com.co/pbi" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+      <div class="block">
+        <i class="fas fa-bolt text-warning"></i>
+        <h6>Energy</h6>
+        <a href="http://servicioserp.com/login/18" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-university fa-2x text-danger mb-2"></i>
-          <h6>CEN Financiero</h6>
-          <a href="https://cenf.cen.biz/site/FE/account/login" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+      <div class="block">
+        <i class="fas fa-paw" style="color:#d63384"></i>
+        <h6>O.C StarPets</h6>
+        <a href="https://reporting.carval.com.co/pbi" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-people-carry fa-2x text-success mb-2"></i>
-          <h6>Mandar y Servir</h6>
-          <a href="https://mandaryservir.co/batuto/users/login" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+      <div class="block">
+        <i class="fas fa-university text-danger"></i>
+        <h6>CEN Financiero</h6>
+        <a href="https://cenf.cen.biz/site/FE/account/login" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
-      <div class="col text-center">
-        <div class="card h-100 py-4">
-          <i class="fas fa-route fa-2x text-primary mb-2"></i>
-          <h6>Satrack</h6>
-          <a href="https://login-ultimamilla.satrack.com/login" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver más</a>
-        </div>
+      <div class="block">
+        <i class="fas fa-people-carry text-success"></i>
+        <h6>Mandar y Servir</h6>
+        <a href="https://mandaryservir.co/batuto/users/login" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-
+      <div class="block">
+        <i class="fas fa-route text-primary"></i>
+        <h6>Satrack</h6>
+        <a href="https://login-ultimamilla.satrack.com/login" target="_blank" rel="noopener noreferrer">Ver más</a>
+      </div>
     </div>
   </main>
 
   <footer class="bg-dark text-center text-white">
     <div class="container p-4">
-      <section class="mb-4"><!-- espacio reservado --></section>
-      <section class="mb-4"><!-- contenido adicional --></section>
+      <section class="mb-4"></section>
+      <section class="mb-4"></section>
     </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2025 Carval - Jr
-    </div>
+    <div class="text-center p-3" style="background-color: rgba(0,0,0,0.2);">© 2025 Carval - Jr</div>
   </footer>
 
   <!-- MDB -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      anime({ targets: '.block', opacity: [0,1], translateY: [20,0], scale: [0.9,1], delay: anime.stagger(100), duration: 800, easing: 'easeOutQuad' });
+      document.querySelectorAll('.block').forEach(el => {
+        el.addEventListener('mouseenter', () => anime({ targets: el, scale: 1.05, duration: 300, easing: 'easeOutQuad' }));
+        el.addEventListener('mouseleave', () => anime({ targets: el, scale: 1, duration: 300, easing: 'easeOutQuad' }));
+      });
+    });
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
