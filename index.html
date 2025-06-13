@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
-  <!-- Anime.js for animations -->
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- STYLES CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <style>
@@ -34,52 +34,52 @@
   <main>
     <h2>Enlaces Corporativos</h2>
     <div class="section-grid">
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-file-excel text-success"></i>
         <h6>Despachos</h6>
         <a href="https://carval464-my.sharepoint.com/:x:/r/personal/luis_rodriguez_carval_com_co/_layouts/15/Doc.aspx?sourcedoc=%7BB5F7A87D-A097-42AF-A4D6-D62516B46D62%7D&file=DESPACHOS%20SEDE%20MEDELLIN%202025.xlsx&fromShare=true&action=default&mobileredirect=true" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-map-marked-alt text-primary"></i>
         <h6>Tracking</h6>
         <a href="https://apps.carval.com.co/trackingweb/" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-vials text-warning"></i>
         <h6>Fichas técnicas y de seguridad</h6>
         <a href="https://carval464.sharepoint.com/sites/fichastecnicasydeseguridad/SitePages/Inicio.aspx" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-award text-info"></i>
         <h6>Certificados Carval</h6>
         <a href="https://carval464.sharepoint.com/sites/certificadoscarval/Certificados%20de%20Anlisis/Forms/AllItems.aspx" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-file-import text-secondary"></i>
         <h6>Importaciones Carval</h6>
         <a href="https://carval464.sharepoint.com/sites/importaciones/default.aspx" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-bolt text-warning"></i>
         <h6>Energy</h6>
         <a href="http://servicioserp.com/login/18" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-paw" style="color:#d63384"></i>
         <h6>O.C StarPets</h6>
         <a href="https://reporting.carval.com.co/pbi" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-university text-danger"></i>
         <h6>CEN Financiero</h6>
         <a href="https://cenf.cen.biz/site/FE/account/login" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-people-carry text-success"></i>
         <h6>Mandar y Servir</h6>
         <a href="https://mandaryservir.co/batuto/users/login" target="_blank" rel="noopener noreferrer">Ver más</a>
       </div>
-      <div class="block">
+      <div class="block" data-aos="fade-up">
         <i class="fas fa-route text-primary"></i>
         <h6>Satrack</h6>
         <a href="https://login-ultimamilla.satrack.com/login" target="_blank" rel="noopener noreferrer">Ver más</a>
@@ -88,22 +88,19 @@
   </main>
 
   <footer class="bg-dark text-center text-white">
-    <div class="container p-4">
-      <section class="mb-4"></section>
-      <section class="mb-4"></section>
-    </div>
+    <div class="container p-4"></div>
     <div class="text-center p-3" style="background-color: rgba(0,0,0,0.2);">© 2025 Carval - Jr</div>
   </footer>
 
   <!-- MDB -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      anime({ targets: '.block', opacity: [0,1], translateY: [20,0], scale: [0.9,1], delay: anime.stagger(100), duration: 800, easing: 'easeOutQuad' });
-      document.querySelectorAll('.block').forEach(el => {
-        el.addEventListener('mouseenter', () => anime({ targets: el, scale: 1.05, duration: 300, easing: 'easeOutQuad' }));
-        el.addEventListener('mouseleave', () => anime({ targets: el, scale: 1, duration: 300, easing: 'easeOutQuad' }));
-      });
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true
     });
   </script>
   <script src="js/main.js"></script>
