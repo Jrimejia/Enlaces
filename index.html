@@ -52,7 +52,24 @@
     }
     @media (max-width: 768px) { .block { height: auto; } }
     @media (max-width: 480px) { .section-grid { grid-template-columns: 1fr; } }
-  </style>
+  .ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+  z-index: 1;
+}
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+</style>
 </head>
 <body>
   <header class="showcase-area"></header>
@@ -62,52 +79,52 @@
       <div class="block">
         <i class="fas fa-file-excel text-success"></i>
         <h6>Despachos</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://carval464-my.sharepoint.com/:x:/r/personal/luis_rodriguez_carval_com_co/_layouts/15/Doc.aspx?sourcedoc=%7BB5F7A87D-A097-42AF-A4D6-D62516B46D62%7D&file=DESPACHOS%20SEDE%20MEDELLIN%202025.xlsx&fromShare=true&action=default&mobileredirect=true" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-map-marked-alt text-primary"></i>
         <h6>Tracking</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://apps.carval.com.co/trackingweb/" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-vials text-warning"></i>
         <h6>Fichas técnicas y de seguridad</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://carval464.sharepoint.com/sites/fichastecnicasydeseguridad/SitePages/Inicio.aspx" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-award text-info"></i>
         <h6>Certificados Carval</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://carval464.sharepoint.com/sites/certificadoscarval/Certificados%20de%20Anlisis/Forms/AllItems.aspx" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-file-import text-secondary"></i>
         <h6>Importaciones Carval</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://carval464.sharepoint.com/sites/importaciones/default.aspx" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-bolt text-warning"></i>
         <h6>Energy</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="http://servicioserp.com/login/18" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-paw" style="color:#d63384"></i>
         <h6>O.C StarPets</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://reporting.carval.com.co/pbi" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-university text-danger"></i>
         <h6>CEN Financiero</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://cenf.cen.biz/site/FE/account/login" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-people-carry text-success"></i>
         <h6>Mandar y Servir</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://mandaryservir.co/batuto/users/login" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
       <div class="block">
         <i class="fas fa-route text-primary"></i>
         <h6>Satrack</h6>
-        <a href="$1" target="_blank" rel="noopener noreferrer">Acceder</a>
+        <a href="https://login-ultimamilla.satrack.com/login" target="_blank" rel="noopener noreferrer">Acceder</a>
       </div>
     </div>
   </main>
@@ -117,5 +134,17 @@
   </footer>
   <!-- MDB -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+<script>
+  document.querySelectorAll('.block a').forEach(link => {
+    link.addEventListener('click', e => {
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      ripple.style.left = `${e.offsetX}px`;
+      ripple.style.top = `${e.offsetY}px`;
+      link.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+    });
+  });
+</script>
 </body>
 </html>
